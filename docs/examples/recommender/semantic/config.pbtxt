@@ -1,0 +1,24 @@
+name: "semantic"
+backend: "python"
+max_batch_size: 1
+
+parameters: {
+  key: "ENV"
+  value: { string_value: "env" }
+}
+
+input [
+  {
+    name: "query"
+    data_type: TYPE_STRING
+    dims: [1]
+  }
+]
+
+output [
+  {
+    name: "top_docs"
+    data_type: TYPE_STRING
+    dims: [1]
+  }
+]
